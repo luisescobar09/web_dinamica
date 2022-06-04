@@ -1,0 +1,19 @@
+$def with(resultado)
+<br>
+<a href="/">Regresar</a>
+<h1>Web dinámica del lado del servidor:</h1><br>
+<form action="" method="post">
+    <label for="number1">Número 1: </label>
+    <input type="number" name="number1" id="number1" required>
+    <br><br>
+    <label for="number1">Número 2: </label>
+    <input type="number" name="number2" id="number2" required>
+    <br><br>
+    <label for="number1">Resultado: </label>
+    <input type="number" name="resultado" id="resultado" value="$resultado" readonly>
+    <br> <br>
+    <button type="submit" name="boton" class="btn btn-primary" value="sumar">Sumar</button>
+    <button type="submit" name="boton" class="btn btn-danger" value="restar">Restar</button>
+    <button type="submit" name="boton" class="btn btn-success" value="multiplicar">Multiplicar</button>
+    <button type="submit" name="boton" class="btn btn-info" value="dividir">Dividir</button>
+</form>

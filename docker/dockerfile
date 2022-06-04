@@ -1,0 +1,13 @@
+#OS IMAGE
+FROM ubuntu:20.04
+
+#UPDATE OS PACKAGES
+RUN apt update
+RUN apt upgrade -y
+
+#INSTALL PYTHON 3
+RUN apt install -y python3
+#INSTALL PIP
+RUN apt install -y python3-pip
+#INSTALL WEB.PY
+RUN pip3 install web.py

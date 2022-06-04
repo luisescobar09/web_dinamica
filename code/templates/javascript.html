@@ -1,0 +1,38 @@
+<a href="/">Regresar</a>
+<h1>Web dinámica del lado del cliente:</h1>
+<form action="" method="post">
+    <label for="number1">Número 1: </label>
+    <input type="number" name="number1" id="number1" required>
+    <br>
+    <label for="number1">Número 2: </label>
+    <input type="number" name="number2" id="number2" required>
+    <br>
+    <label for="number1">Resultado: </label>
+    <input type="number" name="resultado" id="resultado" required readonly>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="calculadora('sumar')">Sumar</button>
+    <button type="button" class="btn btn-primary" onclick="calculadora('restar')">Restar</button>
+    <button type="button" class="btn btn-primary" onclick="calculadora('multiplicar')">Multiplicar</button>
+    <button type="button" class="btn btn-primary" onclick="calculadora('dividir')">Dividir</button>
+</form>
+
+<script>
+    function calculadora(operacion){
+        var number1 = document.getElementById("number1").value;
+        var number2 = document.getElementById("number2").value;
+        var resultado = 0;
+        if(operacion == 'sumar') {
+            resultado = parseInt(number1) + parseInt(number2);
+        }
+        else if (operacion == 'restar') {
+            resultado = parseInt(number1) - parseInt(number2);
+        }
+        else if (operacion == 'multiplicar') {
+            resultado = parseInt(number1) * parseInt(number2);
+        }
+        else if (operacion == 'dividir') {
+            resultado = parseInt(number1) / parseInt(number2);
+        }
+        document.getElementById("resultado").value = resultado;
+    }
+</script>
